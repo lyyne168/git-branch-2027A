@@ -1,0 +1,829 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: #302928;
+    background: #fcf8f5;
+}
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --brown: #9d6857;
+    --dark: #302928;
+    --cream: #fcf8f5;
+    --pink: #e7c6bb;
+    --light-pink: #f3e2dc;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 82px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(252, 248, 245, 0.9);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+
+/* LOGO */
+
+.logo {
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: var(--dark);
+
+    text-decoration: none;
+
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--brown);
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+}
+
+.menu a {
+    position: relative;
+
+    padding: 10px 0;
+
+    text-decoration: none;
+
+    color: #746b68;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+
+/* ACTIVE MENU */
+
+.menu a::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--brown);
+
+    transform: translateX(-50%);
+
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: var(--brown);
+}
+
+.menu a.active::after {
+    width: 100%;
+}
+
+
+/* NAV ICONS */
+
+.nav-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-actions button {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.nav-actions button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.bag {
+    position: relative;
+}
+
+.bag span {
+    position: absolute;
+
+    top: -3px;
+    right: -3px;
+
+    width: 17px;
+    height: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--brown);
+
+    color: white;
+
+    font-size: 9px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    padding: 70px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+
+/* LEFT */
+
+.hero-content {
+    width: 50%;
+
+    animation: fadeLeft 1s ease;
+}
+
+.label {
+    color: var(--brown);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    max-width: 650px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(55px, 6vw, 85px);
+
+    line-height: 1.02;
+
+    font-weight: 600;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: var(--brown);
+
+    font-style: italic;
+}
+
+.hero p {
+    max-width: 510px;
+
+    margin: 28px 0;
+
+    color: #7b716d;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.shop {
+    color: white;
+
+    background: var(--brown);
+
+    box-shadow:
+        0 12px 25px rgba(157, 104, 87, 0.2);
+}
+
+.shop span {
+    margin-left: 12px;
+
+    transition: 0.3s;
+}
+
+.shop:hover {
+    transform: translateY(-3px);
+}
+
+.shop:hover span {
+    margin-left: 18px;
+}
+
+.discover {
+    color: var(--dark);
+
+    border: 1px solid #d8c8c1;
+}
+
+.discover:hover {
+    background: white;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 55px;
+}
+
+.stat {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.stat strong {
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+}
+
+.stat small {
+    margin-top: 3px;
+
+    color: #89807c;
+
+    font-size: 10px;
+}
+
+.line {
+    width: 1px;
+    height: 35px;
+
+    background: #d9ccc6;
+}
+
+
+/* =========================
+   HERO PRODUCT
+========================= */
+
+.hero-product {
+    width: 45%;
+
+    height: 520px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    animation: fadeRight 1s ease;
+}
+
+
+/* BACKGROUND */
+
+.background-circle {
+    width: 420px;
+    height: 470px;
+
+    position: absolute;
+
+    background: #e6c4b9;
+
+    border-radius: 50% 50% 48% 52%;
+
+    transform: rotate(-10deg);
+}
+
+
+/* PRODUCT */
+
+.bottle-wrapper {
+    position: relative;
+
+    z-index: 3;
+
+    animation: float 4s ease-in-out infinite;
+}
+
+.bottle {
+    width: 205px;
+    height: 345px;
+
+    border-radius: 25px 25px 55px 55px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdfb 0%,
+            #f4e8e2 50%,
+            #d9b9ad 100%
+        );
+
+    box-shadow:
+        25px 30px 45px rgba(70, 43, 35, 0.18),
+        inset -15px 0 20px rgba(0, 0, 0, 0.03);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* CAP */
+
+.bottle-cap {
+    width: 80px;
+    height: 62px;
+
+    position: absolute;
+
+    z-index: 4;
+
+    top: 55px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #a97868,
+            #c49a8b,
+            #956252
+        );
+
+    border-radius: 7px 7px 3px 3px;
+
+    box-shadow:
+        0 8px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+/* BOTTLE CONTENT */
+
+.bottle-content {
+    margin-top: 50px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.bottle-content small {
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #5d514d;
+}
+
+.bottle-content h2 {
+    margin: 12px 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+
+    letter-spacing: 2px;
+}
+
+.bottle-content p {
+    margin: 0;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #665955;
+}
+
+.bottle-line {
+    width: 35px;
+    height: 1px;
+
+    margin: 15px 0;
+
+    background: #a47a6b;
+}
+
+.bottle-content span {
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+    line-height: 1.7;
+
+    color: #766863;
+}
+
+
+/* =========================
+   FLOATING LABELS
+========================= */
+
+.floating {
+    position: absolute;
+
+    z-index: 5;
+
+    padding: 13px 20px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 30px;
+
+    font-size: 11px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08);
+
+    animation: floatSmall 3s ease-in-out infinite;
+}
+
+.floating span {
+    margin-right: 7px;
+}
+
+.floating-one {
+    top: 90px;
+    left: 10px;
+}
+
+.floating-two {
+    right: 5px;
+    bottom: 100px;
+
+    animation-delay: 1s;
+}
+
+
+/* DECORATIVE */
+
+.leaf {
+    position: absolute;
+
+    color: white;
+
+    font-size: 40px;
+
+    opacity: 0.8;
+}
+
+.leaf-one {
+    top: 80px;
+    right: 60px;
+}
+
+.leaf-two {
+    bottom: 70px;
+    left: 60px;
+
+    font-size: 25px;
+}
+
+
+/* =========================
+   BENEFITS
+========================= */
+
+.benefits {
+    padding: 32px 8%;
+
+    background: #f2e2dc;
+
+    border-top: 1px solid #ead6ce;
+
+    border-bottom: 1px solid #ead6ce;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.benefit {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 15px;
+
+    border-right: 1px solid #dfcbc3;
+}
+
+.benefit:last-child {
+    border-right: none;
+}
+
+.benefit-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 20px;
+}
+
+.benefit h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 15px;
+
+    margin-bottom: 4px;
+}
+
+.benefit p {
+    color: #837873;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes floatSmall {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .menu {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding-top: 80px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .stats {
+        justify-content: center;
+    }
+
+    .hero-product {
+        width: 100%;
+
+        margin-top: 60px;
+    }
+
+    .benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefit:nth-child(2) {
+        border-right: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-actions button:nth-child(1),
+    .nav-actions button:nth-child(2) {
+        display: none;
+    }
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero-product {
+        height: 440px;
+    }
+
+    .background-circle {
+        width: 310px;
+        height: 370px;
+    }
+
+    .bottle {
+        width: 160px;
+        height: 280px;
+    }
+
+    .bottle-cap {
+        width: 65px;
+        height: 50px;
+
+        top: 45px;
+    }
+
+    .floating-one {
+        left: 0;
+    }
+
+    .floating-two {
+        right: 0;
+    }
+
+    .stats {
+        gap: 15px;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit {
+        border-right: none;
+
+        border-bottom: 1px solid #dfcbc3;
+    }
+
+    .benefit:last-child {
+        border-bottom: none;
+    }
+}
