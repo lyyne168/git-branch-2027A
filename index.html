@@ -4,207 +4,474 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>LUMÉA | Premium Skincare</title>
+    <title>LUMÉA — Premium Skincare</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
-    <header class="navbar">
+<!-- NAVBAR -->
+<header class="navbar">
 
-        <a href="#" class="logo">
-            LUMÉA<span>.</span>
-        </a>
+    <a href="#home" class="logo">
+        LUMÉA<span>.</span>
+    </a>
 
-        <nav class="menu">
-            <a href="#" class="active">Home</a>
-            <a href="#">Products</a>
-            <a href="#">About</a>
-            <a href="#">Reviews</a>
-            <a href="#">Contact</a>
-        </nav>
+    <nav>
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
 
-        <div class="nav-actions">
-            <button>⌕</button>
-            <button>♡</button>
-            <button class="bag">
-                🛍
-                <span>2</span>
-            </button>
+    <div class="nav-icons">
+        <button>⌕</button>
+        <button>♡</button>
+        <button class="cart">🛍 <span>2</span></button>
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <div class="tag">
+            ✦ CLEAN BEAUTY · NATURAL CARE
         </div>
 
-    </header>
+        <h1>
+            Your skin deserves
+            <em>the best.</em>
+        </h1>
+
+        <p>
+            Discover our gentle skincare collection designed
+            to nourish, hydrate, and reveal your natural glow.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#products" class="btn primary">
+                Shop Collection →
+            </a>
+
+            <a href="#about" class="btn secondary">
+                Discover More
+            </a>
+        </div>
+
+        <div class="hero-info">
+
+            <div>
+                <strong>100%</strong>
+                <span>Natural</span>
+            </div>
+
+            <div>
+                <strong>24K+</strong>
+                <span>Happy Customers</span>
+            </div>
+
+            <div>
+                <strong>4.9/5</strong>
+                <span>Customer Rating</span>
+            </div>
+
+        </div>
+
+    </div>
 
 
-    <!-- HOME / HERO -->
-    <main>
+    <div class="hero-visual">
 
-        <section class="hero">
+        <div class="blob"></div>
 
-            <!-- LEFT CONTENT -->
-            <div class="hero-content">
+        <div class="floating-card card-one">
+            ✦ Hydrating
+        </div>
 
-                <div class="label">
-                    ✦ CLEAN BEAUTY · NATURAL CARE
-                </div>
+        <div class="floating-card card-two">
+            🌿 Organic
+        </div>
 
-                <h1>
-                    Your skin deserves
-                    <span>the best.</span>
-                </h1>
+        <div class="skincare-product">
 
-                <p>
-                    Discover gentle skincare made with carefully
-                    selected ingredients to hydrate, nourish,
-                    and reveal your natural glow.
-                </p>
+            <div class="cap"></div>
 
-                <div class="buttons">
+            <div class="bottle">
 
-                    <a href="#" class="btn shop">
-                        Shop Collection
-                        <span>→</span>
-                    </a>
-
-                    <a href="#" class="btn discover">
-                        Discover More
-                    </a>
-
-                </div>
-
-                <!-- SMALL STATS -->
-                <div class="stats">
-
-                    <div class="stat">
-                        <strong>100%</strong>
-                        <small>Natural</small>
-                    </div>
-
-                    <div class="line"></div>
-
-                    <div class="stat">
-                        <strong>24K+</strong>
-                        <small>Happy Customers</small>
-                    </div>
-
-                    <div class="line"></div>
-
-                    <div class="stat">
-                        <strong>4.9</strong>
-                        <small>Customer Rating</small>
-                    </div>
-
+                <div class="bottle-text">
+                    <small>LUMÉA</small>
+                    <strong>SKIN</strong>
+                    <span>GLOW SERUM</span>
                 </div>
 
             </div>
 
+        </div>
 
-            <!-- RIGHT PRODUCT -->
-            <div class="hero-product">
+    </div>
 
-                <div class="background-circle"></div>
-
-                <!-- Decorative leaves -->
-                <div class="leaf leaf-one">✦</div>
-                <div class="leaf leaf-two">✧</div>
-
-                <!-- Floating labels -->
-                <div class="floating floating-one">
-                    <span>🌿</span>
-                    Natural
-                </div>
-
-                <div class="floating floating-two">
-                    <span>💧</span>
-                    Hydrating
-                </div>
+</section>
 
 
-                <!-- PRODUCT BOTTLE -->
-                <div class="bottle-wrapper">
+<!-- FEATURES -->
+<section class="features">
 
-                    <div class="bottle-cap"></div>
+    <div>
+        <div class="feature-icon">🌿</div>
+        <h3>Clean Ingredients</h3>
+        <p>Carefully selected natural ingredients.</p>
+    </div>
 
-                    <div class="bottle">
+    <div>
+        <div class="feature-icon">💧</div>
+        <h3>Deep Hydration</h3>
+        <p>Keep your skin soft and moisturized.</p>
+    </div>
 
-                        <div class="bottle-content">
+    <div>
+        <div class="feature-icon">✨</div>
+        <h3>Visible Glow</h3>
+        <p>Reveal brighter and healthier-looking skin.</p>
+    </div>
 
-                            <small>LUMÉA</small>
+    <div>
+        <div class="feature-icon">♡</div>
+        <h3>Cruelty Free</h3>
+        <p>Never tested on animals.</p>
+    </div>
 
-                            <h2>GLOW</h2>
+</section>
 
-                            <p>FACE SERUM</p>
 
-                            <div class="bottle-line"></div>
+<!-- PRODUCTS -->
+<section id="products" class="section">
 
-                            <span>
-                                VITAMIN C<br>
-                                + HYALURONIC ACID
-                            </span>
+    <div class="section-heading">
 
-                        </div>
+        <span>OUR COLLECTION</span>
 
+        <h2>Beauty rituals, <em>reimagined.</em></h2>
+
+        <p>
+            Everything your skin needs for a simple,
+            luxurious daily routine.
+        </p>
+
+    </div>
+
+
+    <div class="products">
+
+        <!-- PRODUCT 1 -->
+        <article class="product-card">
+
+            <div class="product-image pink">
+
+                <span class="badge">BESTSELLER</span>
+
+                <div class="product serum">
+                    <div class="product-cap"></div>
+
+                    <div class="product-label">
+                        <small>LUMÉA</small>
+                        <strong>GLOW</strong>
+                        <span>FACE SERUM</span>
                     </div>
-
                 </div>
+
+                <button class="heart">♡</button>
 
             </div>
 
-        </section>
-
-
-        <!-- SIMPLE BENEFITS -->
-        <section class="benefits">
-
-            <div class="benefit">
-                <div class="benefit-icon">🌿</div>
+            <div class="product-details">
 
                 <div>
-                    <h3>Clean Ingredients</h3>
-                    <p>Simple & natural formulas</p>
+                    <h3>Radiance Glow Serum</h3>
+                    <p>Vitamin C · Hyaluronic Acid</p>
                 </div>
+
+                <strong>$32</strong>
+
             </div>
 
+            <button class="add-cart">
+                Add to Bag
+            </button>
 
-            <div class="benefit">
-                <div class="benefit-icon">💧</div>
+        </article>
+
+
+        <!-- PRODUCT 2 -->
+        <article class="product-card">
+
+            <div class="product-image beige">
+
+                <div class="product cream">
+
+                    <div class="cream-top"></div>
+
+                    <div class="cream-label">
+                        <small>LUMÉA</small>
+                        <strong>HYDRATE</strong>
+                        <span>FACE CREAM</span>
+                    </div>
+
+                </div>
+
+                <button class="heart">♡</button>
+
+            </div>
+
+            <div class="product-details">
 
                 <div>
-                    <h3>Deep Hydration</h3>
-                    <p>Soft & moisturized skin</p>
+                    <h3>Cloud Moisture Cream</h3>
+                    <p>Ceramides · Squalane</p>
                 </div>
+
+                <strong>$28</strong>
+
             </div>
 
+            <button class="add-cart">
+                Add to Bag
+            </button>
 
-            <div class="benefit">
-                <div class="benefit-icon">✨</div>
+        </article>
+
+
+        <!-- PRODUCT 3 -->
+        <article class="product-card">
+
+            <div class="product-image green">
+
+                <div class="product cleanser">
+
+                    <div class="pump"></div>
+
+                    <div class="cleanser-label">
+                        <small>LUMÉA</small>
+                        <strong>PURE</strong>
+                        <span>GENTLE CLEANSER</span>
+                    </div>
+
+                </div>
+
+                <button class="heart">♡</button>
+
+            </div>
+
+            <div class="product-details">
 
                 <div>
-                    <h3>Natural Glow</h3>
-                    <p>Healthy-looking skin</p>
+                    <h3>Pure Balance Cleanser</h3>
+                    <p>Green Tea · Aloe Vera</p>
                 </div>
+
+                <strong>$22</strong>
+
             </div>
 
+            <button class="add-cart">
+                Add to Bag
+            </button>
 
-            <div class="benefit">
-                <div class="benefit-icon">♡</div>
+        </article>
 
-                <div>
-                    <h3>Cruelty Free</h3>
-                    <p>Never tested on animals</p>
-                </div>
-            </div>
+    </div>
 
-        </section>
+</section>
 
-    </main>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+
+    <div class="about-image">
+
+        <div class="about-circle"></div>
+
+        <div class="about-bottle">
+            <div class="about-cap"></div>
+            <span>LUMÉA</span>
+            <strong>PURE<br>SKIN</strong>
+        </div>
+
+    </div>
+
+
+    <div class="about-content">
+
+        <span>THE LUMÉA STORY</span>
+
+        <h2>
+            Skincare made
+            <em>beautifully simple.</em>
+        </h2>
+
+        <p>
+            We believe skincare shouldn't be complicated.
+            Our products combine clean ingredients with
+            modern skincare science to create simple,
+            effective rituals for every day.
+        </p>
+
+        <a href="#contact" class="text-button">
+            Our Story →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews">
+
+    <div class="section-heading">
+        <span>OUR CUSTOMERS</span>
+
+        <h2>Loved by <em>thousands.</em></h2>
+    </div>
+
+    <div class="review-grid">
+
+        <div class="review">
+            <div class="stars">★★★★★</div>
+
+            <p>
+                “My skin feels so much softer and healthier.
+                The serum has become part of my daily routine.”
+            </p>
+
+            <strong>— Sophia M.</strong>
+        </div>
+
+        <div class="review">
+            <div class="stars">★★★★★</div>
+
+            <p>
+                “Beautiful products and the quality is amazing.
+                I absolutely love the packaging too!”
+            </p>
+
+            <strong>— Emma R.</strong>
+        </div>
+
+        <div class="review">
+            <div class="stars">★★★★★</div>
+
+            <p>
+                “Simple, gentle, and perfect for my skin.
+                Definitely ordering again.”
+            </p>
+
+            <strong>— Mia K.</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="newsletter">
+
+    <div>
+
+        <span>STAY IN THE GLOW</span>
+
+        <h2>
+            Beautiful skin starts
+            <em>with you.</em>
+        </h2>
+
+        <p>
+            Subscribe for skincare tips, exclusive offers,
+            and new product launches.
+        </p>
+
+    </div>
+
+    <form>
+
+        <input
+            type="email"
+            placeholder="Your email address"
+        >
+
+        <button>
+            Subscribe →
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-logo">
+        LUMÉA<span>.</span>
+    </div>
+
+    <p>
+        © 2026 LUMÉA Skincare. All rights reserved.
+    </p>
+
+    <div class="social">
+        Instagram · Facebook · TikTok
+    </div>
+
+</footer>
+
+
+<script>
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.clientHeight;
+
+        if (
+            scrollY >= sectionTop &&
+            scrollY < sectionTop + sectionHeight
+        ) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
